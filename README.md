@@ -33,6 +33,10 @@ python live_detect.py
 python simulate_attack.py
 ```
 
+## Deploy (Render)
+
+`render.yaml` sets everything up: Python 3.12, `pip install -r requirements.txt`, then `gunicorn app:app --bind 0.0.0.0:$PORT`. For an existing Render service, use that same start command in its settings. The model files in `models/` are committed, so no training step runs at deploy time.
+
 ## API
 
 | Endpoint | Method | Purpose |
